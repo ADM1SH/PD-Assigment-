@@ -69,7 +69,7 @@ void displayMenu() {
     printf("2. Book a Ticket\n");
     printf("3. View Bookings\n");
     printf("4. Cancel a Ticket\n");
-    printf("5. Exit\n");
+    printf("5. Exit\n\n");
 }
 
 // Clear the input buffer
@@ -121,7 +121,23 @@ void loadFlights() {
     flights[2].price = 500.0;
     memset(flights[2].seats, 0, sizeof(flights[2].seats));
 
-    flightCount = 3;
+    // Initialize flight 4
+    strncpy(flights[3].flightNumber, "FL012", sizeof(flights[3].flightNumber) - 1);
+    strncpy(flights[3].destination, "Beijing", sizeof(flights[3].destination) - 1);
+    strncpy(flights[3].departureTime, "2025-02-04 00:00", sizeof(flights[3].departureTime) - 1);
+    flights[3].seatCapacity = 24;
+    flights[3].price = 700.0;
+    memset(flights[3].seats, 0, sizeof(flights[3].seats));
+
+    // Initialize flight 5
+    strncpy(flights[4].flightNumber, "FL045", sizeof(flights[4].flightNumber) - 1);
+    strncpy(flights[4].destination, "Seoul", sizeof(flights[4].destination) - 1);
+    strncpy(flights[4].departureTime, "2025-02-05 05:00", sizeof(flights[4].departureTime) - 1);
+    flights[4].seatCapacity = 24;
+    flights[4].price = 1100.0;
+    memset(flights[4].seats, 0, sizeof(flights[4].seats));    
+
+    flightCount = 5;
 }
 
 // Load bookings from file
