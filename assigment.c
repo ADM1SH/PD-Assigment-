@@ -198,6 +198,7 @@ void bookTicket() {
     int seatNumber;
     const int columns = 6; // Seats per row for display
 
+    searchFlights(); // Show available flights
     printf("\nEnter Flight Number: ");
     scanf("%9s", flightNumber);
     clearBuffer();
